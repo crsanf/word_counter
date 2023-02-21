@@ -1,35 +1,21 @@
-#For Regex
-import re
+import sys
 
-source = "file_to_parse.txt"
-#destination = "result.txt"
+#Set the full file path here or leave blank and be prompted for it
+source = r''''''
 
-"""
-This script will count the number of words in a file.
-A word is defined as any group of characters surrounded
-by white space on either side or the starting word of a string
-or ending word of a string with a new line character at the end.
+def main():
+    word_count = 0
+    with open(source) as f:
+        for line in f:
+            stripped_line = line.strip()
+            words = stripped_line.split(' ')
+            word_count += len(words)
 
-Christopher Sanfilippo March 12 2019 @ 11:16 AM
+    print(f'Total words in file: {word_count}')
 
-"""
+if __name__ == '__main__':
+    if source == '':
+        source = sys.argv[1]
 
-#regex = "\w+"
-regex = "[a-zA-Z]+"
-word_count = 0
-
-with open(source) as f:
-	for line in f:
-		new_line = line.rstrip(" \n")
-		words = new_line.split(" ")
-		print(words)
-		word_count += len(words)
-
-print (word_count)
-
-
-
-
-
-
-
+    print(sys.argv)
+    main()
