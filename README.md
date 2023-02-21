@@ -1,7 +1,7 @@
 # word_counter
 Counts words in a given file
 
-Created this script back in 2019 for testing my Python skills. I recreated it in < 5 minutes to make it better and cleaner.
+Created this script back in 2019 for testing my Python skills. I made some minor changes to it to make it a bit cleaner and added functionality with CLI argument file path.
 
 # Before Running
 - **Optional** Edit the file path in the code or run with a command cine argument
